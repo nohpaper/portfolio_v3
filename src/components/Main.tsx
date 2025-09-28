@@ -1,6 +1,10 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { usePortfolioStore } from "../store/store.ts";
 
 export default function Main() {
+    const navigate = useNavigate();
+    const portfolioList = usePortfolioStore((state) => state.list);
     const [myDescription, setMyDescription] = useState([
         {
             isContentView: false,
@@ -87,14 +91,14 @@ export default function Main() {
                                     <p className="mark_style color_gray">HTML5</p>
                                     <p className="mark_style color_yellow">CSS</p>
                                     <p className="mark_style color_yellow">SCSS</p>
-                                    <p className="mark_style color_pink">JavaScript</p>
-                                    <p className="mark_style color_pink">JQuery</p>
+                                    <p className="mark_style color_purple">JavaScript</p>
+                                    <p className="mark_style color_purple">JQuery</p>
                                 </li>
                                 <li className="flex gap-[6px]">
                                     <p className="mark_style color_bluepurple">REACT</p>
                                     <p className="mark_style color_bluepurple">TypeScript</p>
                                     <p className="mark_style color_yellow">Tailwind</p>
-                                    <p className="mark_style color_pink">Redux</p>
+                                    <p className="mark_style color_purple">Redux</p>
                                 </li>
                             </ul>
                         </div>
@@ -179,13 +183,59 @@ export default function Main() {
                     );
                 })}
             </div>
-            <div className="flex pt-[20px]">
+            <div className="pt-[20px]">
                 <ul className="w-[100%] flex justify-between">
                     <li className="w-[33.3%] py-[16px] text-center">전체</li>
                     <li className="w-[33.3%] py-[16px] text-center">하드코딩</li>
                     <li className="w-[33.3%] py-[16px] text-center">프론트</li>
                 </ul>
-                <ul></ul>
+                <ul className="px-[10px] rounded-[0_0_20px_20px] bg-beige-200">
+                    {portfolioList.map((item, index) => {
+                        return (
+                            <li
+                                key={index}
+                                className="w-[100%] h-[60px] px-[20px] box-border rounded-20px overflow-hidden bg-transparent transition-all duration-700 hover:h-[112px] hover:bg-white"
+                            >
+                                <button
+                                    className="w-[100%] block cursor-pointer"
+                                    onClick={() => navigate(`/portfolio/${item.name}`)}
+                                >
+                                    <div className="py-[20px] flex justify-between">
+                                        <h6>{item.info[0].title}</h6>
+                                        <p>{item.info[0].date}</p>
+                                    </div>
+                                    {/*hover 시 보이는 영역*/}
+                                    <ul className="flex gap-[10px] justify-end py-[20px]">
+                                        <li>{item.info[0].type}</li>
+                                        <li>{item.info[0].contribution}%</li>
+                                        <li>{item.info[0].workforce}명</li>
+                                        <li className="flex gap-[16px]">
+                                            {item.info[0].tool?.map((element, subIndex) => {
+                                                return (
+                                                    <ul
+                                                        key={subIndex}
+                                                        className="relative flex gap-[6px] [&:nth-child(n+2)]:before:content-['/'] before:text-[12px] before:absolute before:left-[-10px] before:top-[50%] before:translate-y-[-50%]"
+                                                    >
+                                                        {element.map((toolName, inIndex) => {
+                                                            return (
+                                                                <li
+                                                                    key={inIndex}
+                                                                    className={`mark_tool color_${toolName.toLowerCase()}`}
+                                                                >
+                                                                    {toolName}
+                                                                </li>
+                                                            );
+                                                        })}
+                                                    </ul>
+                                                );
+                                            })}
+                                        </li>
+                                    </ul>
+                                </button>
+                            </li>
+                        );
+                    })}
+                </ul>
             </div>
         </div>
     );
