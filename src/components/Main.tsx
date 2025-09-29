@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { usePortfolioStore } from "../store/store.ts";
+import { PortfolioList } from "../assets/Fragment.tsx";
 
 export default function Main() {
-    const navigate = useNavigate();
     const portfolioList = usePortfolioStore((state) => state.list);
     const [myDescription, setMyDescription] = useState([
         {
@@ -39,8 +38,31 @@ export default function Main() {
                 "또한 여러 프로젝트를 병행하면서도 유지보수 요청이 들어오면 우선순위를 조율하고, 실수를 줄이기 위해 요청 내용을 정확히 파악하고 정리한 후 작업에 착수하는 프로세스를 갖추었습니다. 특히 제품 콘텐츠의 경우 사용자에게 직접 노출되는 중요한 정보이기 때문에, 세부 내용과 링크, 스타일 반영 여부 등을 꼼꼼하게 점검하며 책임감을 가지고 작업했습니다. 이러한 경험을 통해 유지보수 역시 단순한 수정이 아닌, 사이트의 품질과 신뢰도를 유지하는 데 핵심적인 역할을 한다는 점을 체감하게 되었고, 퍼블리셔로서 완성된 프로젝트 이후에도 유지보수와 확장성을 고려하는 시각을 갖추게 되었습니다.",
         },
     ]);
+    const [portfolioType, setPortfolioType] = useState([
+        {
+            name: "전체",
+            isClick: true,
+        },
+        {
+            name: "하드코딩",
+            isClick: false,
+        },
+        {
+            name: "프론트",
+            isClick: false,
+        },
+    ]);
+
+    const clickTypeCheck = portfolioType.find((item) => {
+        return item.isClick;
+    });
+    const portfolioFilter = portfolioList.filter(
+        (element) => element.workType === clickTypeCheck?.name,
+    );
+    console.log(clickTypeCheck);
+
     return (
-        <div className="w-[1120px] h-[500px] mx-auto pt-[80px]">
+        <div className="w-[1120px] mx-auto py-[80px]">
             <div className="flex gap-[24px]">
                 <div className="px-[30px] py-[20px] rounded-20px bg-white">
                     구조화된 퍼블리싱, 책임감 있는 구현을 하는 5년차 퍼블리셔 노종희입니다
@@ -185,56 +207,41 @@ export default function Main() {
             </div>
             <div className="pt-[20px]">
                 <ul className="w-[100%] flex justify-between">
-                    <li className="w-[33.3%] py-[16px] text-center">전체</li>
-                    <li className="w-[33.3%] py-[16px] text-center">하드코딩</li>
-                    <li className="w-[33.3%] py-[16px] text-center">프론트</li>
-                </ul>
-                <ul className="px-[10px] rounded-[0_0_20px_20px] bg-beige-200">
-                    {portfolioList.map((item, index) => {
+                    {portfolioType.map((item, index) => {
                         return (
-                            <li
-                                key={index}
-                                className="w-[100%] h-[60px] px-[20px] box-border rounded-20px overflow-hidden bg-transparent transition-all duration-700 hover:h-[112px] hover:bg-white"
-                            >
+                            <li className="w-[33.3%] " key={index}>
                                 <button
-                                    className="w-[100%] block cursor-pointer"
-                                    onClick={() => navigate(`/portfolio/${item.name}`)}
+                                    type="button"
+                                    className={`w-[100%] block py-[16px] cursor-pointer rounded-[20px_20px_0_0] text-center ${item.isClick ? "bg-beige-200" : "bg-transparent"}`}
+                                    onClick={() => {
+                                        console.log(item.isClick);
+                                        const update = [...portfolioType];
+                                        for (
+                                            let subIndex = 0;
+                                            subIndex < update.length;
+                                            subIndex++
+                                        ) {
+                                            update[subIndex].isClick = false;
+                                        }
+                                        update[index].isClick = true;
+
+                                        setPortfolioType(update);
+                                    }}
                                 >
-                                    <div className="py-[20px] flex justify-between">
-                                        <h6>{item.info[0].title}</h6>
-                                        <p>{item.info[0].date}</p>
-                                    </div>
-                                    {/*hover 시 보이는 영역*/}
-                                    <ul className="flex gap-[10px] justify-end py-[20px]">
-                                        <li>{item.info[0].type}</li>
-                                        <li>{item.info[0].contribution}%</li>
-                                        <li>{item.info[0].workforce}명</li>
-                                        <li className="flex gap-[16px]">
-                                            {item.info[0].tool?.map((element, subIndex) => {
-                                                return (
-                                                    <ul
-                                                        key={subIndex}
-                                                        className="relative flex gap-[6px] [&:nth-child(n+2)]:before:content-['/'] before:text-[12px] before:absolute before:left-[-10px] before:top-[50%] before:translate-y-[-50%]"
-                                                    >
-                                                        {element.map((toolName, inIndex) => {
-                                                            return (
-                                                                <li
-                                                                    key={inIndex}
-                                                                    className={`mark_tool color_${toolName.toLowerCase()}`}
-                                                                >
-                                                                    {toolName}
-                                                                </li>
-                                                            );
-                                                        })}
-                                                    </ul>
-                                                );
-                                            })}
-                                        </li>
-                                    </ul>
+                                    {item.name}
                                 </button>
                             </li>
                         );
                     })}
+                </ul>
+                <ul className="px-[10px] py-[10px] rounded-[0_0_20px_20px] bg-beige-200">
+                    {clickTypeCheck?.name === "하드코딩" || clickTypeCheck?.name === "프론트"
+                        ? portfolioFilter.map((item, index) => {
+                              return <PortfolioList item={item} index={index} />;
+                          })
+                        : portfolioList.map((item, index) => {
+                              return <PortfolioList item={item} index={index} />;
+                          })}
                 </ul>
             </div>
         </div>

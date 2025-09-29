@@ -3,6 +3,9 @@ import { useNavigate } from "react-router-dom";
 
 import Receipt from "./Receipt.tsx";
 import Golf from "./Golf.tsx";
+import EnergySolution from "./EnergySolution.tsx";
+import Shopchain from "./Shopchain.tsx";
+import Mabinogi from "./Mabinogi.tsx";
 
 export default function PortfolioView() {
     const { name } = useParams<{ name: string }>();
@@ -12,6 +15,12 @@ export default function PortfolioView() {
         return <Golf />;
     } else if (name === "receipt") {
         return <Receipt />;
+    } else if (name === "energy_solution") {
+        return <EnergySolution />;
+    } else if (name === "shopchain") {
+        return <Shopchain />;
+    } else if (name === "mabinogi") {
+        return <Mabinogi />;
     }
 
     return (

@@ -4,7 +4,7 @@ import { InfoNav } from "../assets/Fragment.tsx";
 
 //slide 관련
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar } from "swiper/modules";
+import { Scrollbar, Navigation } from "swiper/modules";
 
 export default function Golf() {
     const { name } = useParams<{ name: string }>();
@@ -33,8 +33,9 @@ export default function Golf() {
                         </h4>
                         <div className="pt-[6px]">
                             <Swiper
-                                modules={[Scrollbar]}
+                                modules={[Navigation, Scrollbar]}
                                 slidesPerView={1}
+                                navigation
                                 scrollbar={{ draggable: true }}
                                 autoHeight={true}
                             >
@@ -68,7 +69,7 @@ export default function Golf() {
                         </div>
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
                             이 프로젝트에서는 메인 퍼블리셔가 PL(Project Leader)의 역할까지 겸하면서
-                            디자인팀, 개발사와의 커뮤니케이션을 전담해주셨습니다.{" "}
+                            디자인팀, 개발사와의 커뮤니케이션을 전담해주셨습니다.
                             <b className="marker_yellow">
                                 일주일 단위로 작업 결과물을 개발사에 전달하는 구조로, 개발사가
                                 우선순위를 정하면 디자인팀과 일정을 조율해 퍼블리싱 작업을 진행
@@ -92,7 +93,7 @@ export default function Golf() {
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
                             이전 회사에서는 혼자서 전체 퍼블리싱을 담당하는 일이 많았기 때문에, 이번
                             프로젝트처럼 역할이 분담된 협업 환경에서의 퍼블리싱은 새로운 도전이자 큰
-                            배움의 기회였습니다.{" "}
+                            배움의 기회였습니다.
                             <b className="marker_yellow">
                                 퍼블리셔로서 일정에 맞춰 작업을 분배받고, 기능 구현 범위 내에서
                                 주도적으로 진행하며 협업의 중요성과 유연한 커뮤니케이션의 필요성을

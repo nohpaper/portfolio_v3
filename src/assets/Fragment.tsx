@@ -63,3 +63,55 @@ export function InfoNav({ list, name }: InfoNavProps) {
         </div>
     );
 }
+
+interface PortfolioListProps {
+    item: PortfolioList;
+    index: number;
+}
+export function PortfolioList({ item, index }: PortfolioListProps) {
+    const navigate = useNavigate();
+
+    return (
+        <li
+            key={index}
+            className="w-[100%] h-[60px] px-[20px] box-border rounded-20px overflow-hidden bg-transparent transition-all duration-700 hover:h-[112px] hover:bg-white"
+        >
+            <button
+                className="w-[100%] block cursor-pointer"
+                onClick={() => navigate(`/portfolio/${item.name}`)}
+            >
+                <div className="py-[20px] flex justify-between">
+                    <h6>{item.info[0].title}</h6>
+                    <p>{item.info[0].date}</p>
+                </div>
+                {/*hover 시 보이는 영역*/}
+                <ul className="flex gap-[10px] justify-end py-[20px]">
+                    <li>{item.info[0].type}</li>
+                    <li>{item.info[0].contribution}%</li>
+                    <li>{item.info[0].workforce}명</li>
+                    <li className="flex gap-[16px]">
+                        {item.info[0].tool?.map((element, subIndex) => {
+                            return (
+                                <ul
+                                    key={subIndex}
+                                    className="relative flex gap-[6px] [&:nth-child(n+2)]:before:content-['/'] before:text-[12px] before:absolute before:left-[-10px] before:top-[50%] before:translate-y-[-50%]"
+                                >
+                                    {element.map((toolName, inIndex) => {
+                                        return (
+                                            <li
+                                                key={inIndex}
+                                                className={`mark_tool color_${toolName.toLowerCase()}`}
+                                            >
+                                                {toolName}
+                                            </li>
+                                        );
+                                    })}
+                                </ul>
+                            );
+                        })}
+                    </li>
+                </ul>
+            </button>
+        </li>
+    );
+}
