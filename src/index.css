@@ -50,6 +50,7 @@
   }
 }
 @layer components {
+  .header_fixed { position: fixed !important; top: 0 !important; pointer-events:none; }
   .marker_yellow {
     position:relative; z-index:1;
     background-image:linear-gradient(to right, #FFE658, #FFE658);
@@ -70,8 +71,9 @@
   .mark_tool {
     display:inline-block; padding:3px 8px; margin-top:-2px; border-radius:5px; font-size:12px;
     &.color_html5 {background-color:#CACACA;}
-    &.color_scss {background-color:#FFE387;}
-    &.color_jquery, &.color_javascript {background-color:#EFCCFF;}
+    &.color_react {background-color:#CCD0FF;}
+    &.color_scss, &.color_tailwind {background-color:#FFE387;}
+    &.color_jquery, &.color_javascript, &.color_redux {background-color:#EFCCFF;}
     &.color_figma, &.color_photoshop {background-color:#FFCDF0;}
     &.color_gsap {background-color:#C9EECA;}
     &.color_scrolltrigger {background-color:#DEC6AE;}

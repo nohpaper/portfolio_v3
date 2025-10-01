@@ -21,6 +21,55 @@ interface PortfolioStore {
 export const usePortfolioStore = create<PortfolioStore>(() => ({
     list: [
         {
+            name: "",
+            isMulti: false,
+            multiTitle: [],
+            workType: "프론트",
+            info: [
+                {
+                    title: "api",
+                    link: "",
+                    date: "",
+                    type: "적응형",
+                    contribution: 100,
+                    workforce: 1,
+                    tool: [["REACT"], ["Tailwind", "zustand"]],
+                },
+            ],
+        },
+        {
+            name: "",
+            isMulti: false,
+            multiTitle: [],
+            workType: "프론트",
+            info: [
+                {
+                    title: "모아보자 가계부",
+                    link: "",
+                    date: "2025. 02. 05 ~ 03. 14(28일)",
+                    type: "반응형",
+                    contribution: 100,
+                    workforce: 1,
+                    tool: [["REACT"], ["Tailwind", "zustand"]],
+                },
+            ],
+        },
+        {
+            name: "todolist",
+            isMulti: true,
+            multiTitle: ["", "Redux & Tailwind 기반"],
+            workType: "프론트",
+            info: [
+                {
+                    title: "투두 리스트",
+                    link: null,
+                    type: "반응형",
+                    contribution: 100,
+                    workforce: 1,
+                },
+            ],
+        },
+        {
             name: "mabinogi",
             isMulti: true,
             multiTitle: ["", "ver.1", "ver.2"],
@@ -35,13 +84,13 @@ export const usePortfolioStore = create<PortfolioStore>(() => ({
                 },
                 {
                     title: "마비노기 시뮬레이터 ver.1",
-                    link: "",
+                    link: "https://nohpaper.github.io/mabinogi_combocard_simulation/",
                     date: "2024. 02. 05 ~ 03. 18(21일)",
                     tool: [["REACT"], ["SCSS"]],
                 },
                 {
                     title: "마비노기 시뮬레이터 ver.2",
-                    link: "",
+                    link: "https://nohpaper.github.io/mabinogi_combocard_simulation_v2/",
                     date: "2024. 10. 08 ~ 11. 11(25일)",
                     tool: [["REACT"], ["Tailwind", "Redux"]],
                 },
@@ -112,23 +161,6 @@ export const usePortfolioStore = create<PortfolioStore>(() => ({
                     contribution: 40,
                     workforce: 2,
                     tool: [["HTML5", "SCSS", "JQuery"], ["Figma"]],
-                },
-            ],
-        },
-        {
-            name: "",
-            isMulti: false,
-            multiTitle: [""],
-            workType: "하드코딩",
-            info: [
-                {
-                    title: "",
-                    link: "",
-                    date: "",
-                    type: "적응형",
-                    contribution: 100,
-                    workforce: 1,
-                    tool: [["HTML5", "SCSS", "JavaScript"], ["GSAP", "ScrollTrigger"], ["Figma"]],
                 },
             ],
         },

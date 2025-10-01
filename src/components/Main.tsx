@@ -59,7 +59,6 @@ export default function Main() {
     const portfolioFilter = portfolioList.filter(
         (element) => element.workType === clickTypeCheck?.name,
     );
-    console.log(clickTypeCheck);
 
     return (
         <div className="w-[1120px] mx-auto py-[80px]">

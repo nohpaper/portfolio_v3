@@ -13,7 +13,7 @@ export default function Shopchain() {
     return (
         <div className="w-[100%] bg-beige-100">
             <div className="w-[1120px] pb-[140px] mx-auto">
-                <InfoNav name={name} list={portfolioList} />
+                <InfoNav name={name} list={portfolioList} index={0} isInitFixed={true} />
                 {/*    본문     */}
                 <div className="pt-[236px]">
                     <h5 className="text-[16px] leading-[1.3]">
