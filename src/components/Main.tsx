@@ -121,6 +121,12 @@ export default function Main() {
                                     <p className="mark_style color_yellow">Tailwind</p>
                                     <p className="mark_style color_purple">Redux</p>
                                 </li>
+                                <li className="flex gap-[6px]">
+                                    <p className="mark_style color_brown">Gsap</p>
+                                    <p className="mark_style color_brown">ScrollTrigger</p>
+                                    <p className="mark_style color_green">Prettier</p>
+                                    <p className="mark_style color_green">ESLint</p>
+                                </li>
                             </ul>
                         </div>
                         <div className="pt-[20px]">

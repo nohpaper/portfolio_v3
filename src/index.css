@@ -66,6 +66,8 @@
     &.color_skyblue {background-color:#CCE4FF;}
     &.color_purple {background-color:#EFCCFF;}
     &.color_bluepurple {background-color:#CCD0FF;}
+    &.color_brown {background-color:#DEC6AE;}
+    &.color_green {background-color:#C9EECA;}
   }
 
   .mark_tool {
@@ -73,10 +75,10 @@
     &.color_html5 {background-color:#CACACA;}
     &.color_react {background-color:#CCD0FF;}
     &.color_scss, &.color_tailwind {background-color:#FFE387;}
-    &.color_jquery, &.color_javascript, &.color_redux {background-color:#EFCCFF;}
+    &.color_jquery, &.color_javascript, &.color_redux, &.color_zustand {background-color:#EFCCFF;}
     &.color_figma, &.color_photoshop {background-color:#FFCDF0;}
-    &.color_gsap {background-color:#C9EECA;}
-    &.color_scrolltrigger {background-color:#DEC6AE;}
+    &.color_gsap, &.color_scrolltrigger {background-color:#DEC6AE;}
+    &.color_prettier, &.color_eslint {background-color:#C9EECA;}
   }
 
   .swiper { padding-bottom:20px !important; }
