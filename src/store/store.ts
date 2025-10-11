@@ -45,27 +45,12 @@ export const usePortfolioStore = create<PortfolioStore>(() => ({
             info: [
                 {
                     title: "모아보자 가계부",
-                    link: "",
+                    link: "https://nohpaper.github.io/record-book-v2/",
                     date: "2025. 06. 26 ~ 08. 08(20일)",
                     type: "반응형",
                     contribution: 100,
                     workforce: 1,
                     tool: [["REACT"], ["Tailwind", "Zustand"], ["Prettier", "ESLint"], ["Figma"]],
-                },
-            ],
-        },
-        {
-            name: "todolist",
-            isMulti: true,
-            multiTitle: ["", "Redux & Tailwind 기반"],
-            workType: "프론트",
-            info: [
-                {
-                    title: "투두 리스트",
-                    link: null,
-                    type: "반응형",
-                    contribution: 100,
-                    workforce: 1,
                 },
             ],
         },
