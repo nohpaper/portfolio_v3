@@ -2,6 +2,22 @@ import { InfoNav } from "../assets/Fragment.tsx";
 import { useParams } from "react-router-dom";
 import { usePortfolioStore } from "../store/store.ts";
 
+//이미지 관련
+import image1_1 from "../../src/assets/energy_solution/1-1.jpg";
+import video1_1 from "../../src/assets/energy_solution/1-1.mp4";
+import image1_2 from "../../src/assets/energy_solution/1-2.jpg";
+import image1_3 from "../../src/assets/energy_solution/1-3.jpg";
+import image2_1 from "../../src/assets/energy_solution/2-1.jpg";
+import video2_1 from "../../src/assets/energy_solution/2-1.mp4";
+import image2_2 from "../../src/assets/energy_solution/2-2.jpg";
+import image2_3 from "../../src/assets/energy_solution/2-3.jpg";
+import image3 from "../../src/assets/energy_solution/3.jpg";
+import video3 from "../../src/assets/energy_solution/3.mp4";
+import image4_1 from "../../src/assets/energy_solution/4-1.jpg";
+import video4_1 from "../../src/assets/energy_solution/4-1.mp4";
+import image4_2 from "../../src/assets/energy_solution/4-2.jpg";
+import image4_3 from "../../src/assets/energy_solution/4-3.jpg";
+
 //slide 관련
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar, Navigation } from "swiper/modules";
@@ -29,7 +45,7 @@ export default function EnergySolution() {
                         진행하였습니다. <br />
                         초기에 작업하던 디자이너가 퇴사한 후, 인터랙션 경험이 전무한 새로운
                         디자이너와 협업하게 되면서 구현 의도를 이해시키고 조율하는 과정을 거쳤고, 이
-                        경험을 통해
+                        경험을 통해&nbsp;
                         <b className="marker_yellow">
                             협업 커뮤니케이션 능력과 인터랙션 중심 퍼블리싱에 대한 실무 감각
                         </b>
@@ -54,23 +70,16 @@ export default function EnergySolution() {
                                         autoPlay
                                         preload="none"
                                         loop
-                                        poster="../../src/assets/energy_solution/1-1.jpg"
+                                        poster={image1_1}
                                     >
-                                        <source
-                                            src="../../src/assets/energy_solution/1-1.mp4"
-                                            type="video/mp4"
-                                        />
+                                        <source src={video1_1} type="video/mp4" />
                                     </video>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img
-                                        src="../../src/assets/energy_solution/1-2.jpg"
-                                        alt=""
-                                        className="w-[70%] block mx-auto"
-                                    />
+                                    <img src={image1_2} alt="" className="w-[70%] block mx-auto" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/energy_solution/1-3.jpg" alt="" />
+                                    <img src={image1_3} alt="" />
                                 </SwiperSlide>
                             </Swiper>
                         </div>
@@ -80,7 +89,7 @@ export default function EnergySolution() {
                             겹(배경색, 초기값 텍스트, 그라데이션 텍스트)으로 구성했습니다. <br />
                             텍스트 외곽선에서 초기값 색상이 남는 이슈를 방지하기 위해 배경색을
                             활용했고, 그라데이션은 background-image와 background-clip: text를
-                            활용하여 마스킹한 뒤,
+                            활용하여 마스킹한 뒤,&nbsp;
                             <b className="marker_yellow">
                                 GSAP과 ScrollTrigger를 통해 background-position을 조정
                             </b>
@@ -107,25 +116,22 @@ export default function EnergySolution() {
                                         autoPlay
                                         preload="none"
                                         loop
-                                        poster="../../src/assets/energy_solution/2-1.jpg"
+                                        poster={image2_1}
                                     >
-                                        <source
-                                            src="../../src/assets/energy_solution/2-1.mp4"
-                                            type="video/mp4"
-                                        />
+                                        <source src={video2_1} type="video/mp4" />
                                     </video>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/energy_solution/2-2.jpg" alt="" />
+                                    <img src={image2_2} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/energy_solution/2-3.jpg" alt="" />
+                                    <img src={image2_3} alt="" />
                                 </SwiperSlide>
                             </Swiper>
                         </div>
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
                             페이지 내 특정 섹션에서는 스크롤 위치에 따라 배경이 밤에서 낮 또는
-                            낮에서 밤으로 전환되는 인터랙션을 구현했습니다.
+                            낮에서 밤으로 전환되는 인터랙션을 구현했습니다.&nbsp;
                             <b className="marker_yellow">
                                 전환 구간 내 오브젝트들은 SVG로 변환하여 CSS 속성으로 색상 및
                                 분위기를 조정
@@ -142,18 +148,8 @@ export default function EnergySolution() {
                             페이지 전환 자연스러움 극대화를 위한 애니메이션 적용
                         </h4>
                         <div className="pt-[6px]">
-                            <video
-                                controls
-                                muted
-                                autoPlay
-                                preload="none"
-                                loop
-                                poster="../../src/assets/energy_solution/3.jpg"
-                            >
-                                <source
-                                    src="../../src/assets/energy_solution/3.mp4"
-                                    type="video/mp4"
-                                />
+                            <video controls muted autoPlay preload="none" loop poster={image3}>
+                                <source src={video3} type="video/mp4" />
                             </video>
                         </div>
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
@@ -163,7 +159,7 @@ export default function EnergySolution() {
                             <br />
                             애니메이션 속도 및 동작 타이밍이 자연스럽게 연출되었는지 직접 확인 후
                             조율하였고, 이미지 → json 애니메이션 → 이미지로 이어지는 전환이 이질감
-                            없이 흐르도록
+                            없이 흐르도록&nbsp;
                             <b className="marker_yellow">
                                 페이드 인/아웃 타이밍과 동작 간격을 조정하여 사용자 경험을 매끄럽게
                                 유지하는 데 집중
@@ -190,19 +186,16 @@ export default function EnergySolution() {
                                         autoPlay
                                         preload="none"
                                         loop
-                                        poster="../../src/assets/energy_solution/4-1.jpg"
+                                        poster={image4_1}
                                     >
-                                        <source
-                                            src="../../src/assets/energy_solution/4-1.mp4"
-                                            type="video/mp4"
-                                        />
+                                        <source src={video4_1} type="video/mp4" />
                                     </video>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/energy_solution/4-2.jpg" alt="" />
+                                    <img src={image4_2} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/energy_solution/4-3.jpg" alt="" />
+                                    <img src={image4_3} alt="" />
                                 </SwiperSlide>
                             </Swiper>
                         </div>
@@ -213,7 +206,7 @@ export default function EnergySolution() {
                             ScrollTrigger를 통해 background-position-x를 조정하여 이미지가 스크롤에
                             맞춰 전환되도록 처리했습니다.
                             <br />이 방식은 작업 당시 프로젝트 일정과 퀄리티 밸런스를 고려했을 때
-                            가장 현실적인 최선의 선택이었으며,
+                            가장 현실적인 최선의 선택이었으며,&nbsp;
                             <b className="marker_yellow">
                                 스크롤에 따라 제품을 직접 조작하는 듯한 몰입감을 줄 수 있도록 연출
                             </b>
@@ -228,7 +221,7 @@ export default function EnergySolution() {
                             초기 디자이너가 디자인 작업을 마친 뒤 퇴사하고, 인터랙션 작업 경험이
                             적은 디자이너분과 협업하게 되었습니다. 클라이언트 요구나 퍼블리싱 중
                             발생하는 UI 조정 등에 대한 이해가 부족하셨기에, 작업 중간중간 기능 구현
-                            방식과 제약사항 등을 직접 설명드리고,
+                            방식과 제약사항 등을 직접 설명드리고,&nbsp;
                             <b className="marker_yellow">
                                 시각 자료나 임시 구현물을 공유하여 서로의 이해도를 맞춰가며 작업
                             </b>
@@ -242,7 +235,7 @@ export default function EnergySolution() {
                             리더십 변화에 대응한 유연한 퍼블리싱
                         </h4>
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
-                            이 프로젝트는 이전에 함께 했던
+                            이 프로젝트는 이전에 함께 했던&nbsp;
                             <b className="marker_yellow">
                                 PL과는 다른 리드 분과 함께 하면서, PL의 스타일에 따라 퍼블리셔의
                                 작업 방향과 의사결정 구조가 크게 달라질 수 있다는 점을 체감하게 된

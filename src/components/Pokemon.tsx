@@ -2,6 +2,14 @@ import { InfoNav } from "../assets/Fragment.tsx";
 import { useParams } from "react-router-dom";
 import { usePortfolioStore } from "../store/store.ts";
 
+//이미지 관련
+import image1_1 from "../../src/assets/pokemon/1-1.jpg";
+import image1_2 from "../../src/assets/pokemon/1-2.jpg";
+import image1_3 from "../../src/assets/pokemon/1-3.jpg";
+import image2_1 from "../../src/assets/pokemon/2-1.jpg";
+import image2_2 from "../../src/assets/pokemon/2-2.jpg";
+import image2_3 from "../../src/assets/pokemon/2-3.jpg";
+
 //slide 관련
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar, Navigation } from "swiper/modules";
@@ -49,13 +57,13 @@ export default function Pokemon() {
                                 autoHeight={true}
                             >
                                 <SwiperSlide>
-                                    <img src="../../src/assets/pokemon/1-1.jpg" alt="" />
+                                    <img src={image1_1} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/pokemon/1-2.jpg" alt="" />
+                                    <img src={image1_2} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/pokemon/1-3.jpg" alt="" />
+                                    <img src={image1_3} alt="" />
                                 </SwiperSlide>
                             </Swiper>
                         </div>
@@ -94,13 +102,13 @@ export default function Pokemon() {
                                 autoHeight={true}
                             >
                                 <SwiperSlide>
-                                    <img src="../../src/assets/pokemon/2-1.jpg" alt="" />
+                                    <img src={image2_1} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/pokemon/2-2.jpg" alt="" />
+                                    <img src={image2_2} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/pokemon/2-3.jpg" alt="" />
+                                    <img src={image2_3} alt="" />
                                 </SwiperSlide>
                             </Swiper>
                         </div>

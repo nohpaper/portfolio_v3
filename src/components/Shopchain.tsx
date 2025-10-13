@@ -2,6 +2,17 @@ import { InfoNav } from "../assets/Fragment.tsx";
 import { useParams } from "react-router-dom";
 import { usePortfolioStore } from "../store/store.ts";
 
+//이미지 관련
+import image1_1 from "../../src/assets/shopchain/1-1.jpg";
+import video1_1 from "../../src/assets/shopchain/1-1.mp4";
+import image1_2 from "../../src/assets/shopchain/1-2.jpg";
+import image1_3 from "../../src/assets/shopchain/1-3.jpg";
+import image1_4 from "../../src/assets/shopchain/1-4.jpg";
+import image4 from "../../src/assets/shopchain/4.gif";
+import image5_1 from "../../src/assets/shopchain/5-1.jpg";
+import video5_1 from "../../src/assets/shopchain/5-1.mp4";
+import image5_2 from "../../src/assets/shopchain/5-2.jpg";
+
 //slide 관련
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper/modules";
@@ -49,22 +60,19 @@ export default function Shopchain() {
                                         autoPlay
                                         preload="none"
                                         loop
-                                        poster="../../src/assets/shopchain/1-1.jpg"
+                                        poster={image1_1}
                                     >
-                                        <source
-                                            src="../../src/assets/shopchain/1-1.mp4"
-                                            type="video/mp4"
-                                        />
+                                        <source src={video1_1} type="video/mp4" />
                                     </video>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/shopchain/1-2.jpg" alt="" />
+                                    <img src={image1_2} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/shopchain/1-3.jpg" alt="" />
+                                    <img src={image1_3} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/shopchain/1-4.jpg" alt="" />
+                                    <img src={image1_4} alt="" />
                                 </SwiperSlide>
                             </Swiper>
                         </div>
@@ -79,7 +87,7 @@ export default function Shopchain() {
                             세팅하였으며, 개발사 요청에 따라 우선 작업이 필요한 페이지를 먼저
                             대응하고, 인터랙션 중심의 페이지는 후순위로 배치하는 방식으로 전체
                             일정을 유연하게 조율했습니다. 이렇게 구조적 설계와 우선순위 기반의 작업
-                            전략을 통해
+                            전략을 통해&nbsp;
                             <b className="marker_yellow">
                                 작업 효율성과 결과물의 일관성을 모두 확보
                             </b>
@@ -96,7 +104,7 @@ export default function Shopchain() {
                             클라이언트와의 협의를 선행한 뒤 구체적인 방향을 퍼블리싱에
                             전달해주었습니다. 구현 단계에서도 모호한 부분은 사전에 문의하고, 구현
                             불가 항목은 빠르게 배제함으로써 효율적인 업무 진행이 가능했습니다.
-                            이러한 협업을 통해
+                            이러한 협업을 통해&nbsp;
                             <b className="marker_yellow">
                                 서로의 역할뿐 아니라 타 직군에 대한 이해가 프로젝트 효율성을
                                 높인다는 점을 체감
@@ -113,7 +121,7 @@ export default function Shopchain() {
                             대해 명확히 조율한 상태였으며, 각 산출물 전달 시에는 작업 가이드와 함께
                             수정 또는 보완이 필요한 부분에 대해 즉각적인 피드백을 요청했습니다. 일정
                             지연이 우려되는 페이지는 사전 대응하고, 개발팀과의 지속적인
-                            커뮤니케이션을 통해 전체 일정을 안정적으로 유지할 수 있었습니다.
+                            커뮤니케이션을 통해 전체 일정을 안정적으로 유지할 수 있었습니다.&nbsp;
                             <b className="marker_yellow">
                                 산출물 검수 또한 정리된 기준에 따라 진행되어 재작업이나 혼선 없이
                                 마무리
@@ -124,7 +132,7 @@ export default function Shopchain() {
                     <div className="pt-[80px]">
                         <h4 className="text-[20px] leading-[1.3]">카드 콘텐츠 인터랙션 구현</h4>
                         <div className="pt-[6px]">
-                            <img src="../../src/assets/shopchain/4.gif" alt="" />
+                            <img src={image4} alt="" />
                         </div>
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
                             사용자 주목도가 높은 카드 콘텐츠 영역에 대해, GSAP과 ScrollTrigger를
@@ -134,7 +142,7 @@ export default function Shopchain() {
                             구성하였습니다. <br /> 코드는 .open_card_wrap 내의 li 요소 4개에 대해,
                             인덱스별로 위치와 회전값을 달리 적용해 시각적으로 리듬감 있는 연출을
                             유도한 부분입니다. 스크롤에 따라 콘텐츠가 살아 움직이는 듯한 경험을
-                            제공함으로써,
+                            제공함으로써,&nbsp;
                             <b className="marker_yellow">
                                 정적인 콘텐츠에 몰입감을 더하고, 브랜드의 역동적인 성격을 효과적으로
                                 전달
@@ -159,16 +167,13 @@ export default function Shopchain() {
                                         autoPlay
                                         preload="none"
                                         loop
-                                        poster="../../src/assets/shopchain/5-1.jpg"
+                                        poster={image5_1}
                                     >
-                                        <source
-                                            src="../../src/assets/shopchain/5-1.mp4"
-                                            type="video/mp4"
-                                        />
+                                        <source src={video5_1} type="video/mp4" />
                                     </video>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/shopchain/5-2.jpg" alt="" />
+                                    <img src={image5_2} alt="" />
                                 </SwiperSlide>
                             </Swiper>
                         </div>
@@ -182,7 +187,7 @@ export default function Shopchain() {
                             autoAlpha 전환을 timeline으로 정밀하게 동기화하여 몰입감 있는 사용
                             경험을 제공합니다.
                             <br />
-                            제품의 복잡한 기능 설명을
+                            제품의 복잡한 기능 설명을&nbsp;
                             <b className="marker_yellow">
                                 단순 텍스트 대신 시각적 시뮬레이션으로 전환함으로써, 브랜드의
                                 기술력과 사용자 친화성을 동시에 강조
@@ -209,7 +214,7 @@ export default function Shopchain() {
                             복잡한 기능 설명도 시각적 스토리텔링으로 자연스럽게 전달할 수
                             있었습니다.
                             <br />
-                            <br /> 이번 프로젝트를 통해 퍼블리싱을 단순한 구현 업무를 넘어,
+                            <br /> 이번 프로젝트를 통해 퍼블리싱을 단순한 구현 업무를 넘어,&nbsp;
                             <b className="marker_yellow">
                                 사용자 경험을 설계하고 전달하는 관점에서 구조적으로 바라보는 시야를
                                 넓힐 수 있었고,

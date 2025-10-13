@@ -2,6 +2,16 @@ import { InfoNav } from "../assets/Fragment.tsx";
 import { useParams } from "react-router-dom";
 import { usePortfolioStore } from "../store/store.ts";
 
+//이미지 관련
+import image1_1 from "../../src/assets/recordbook/1-1.jpg";
+import image1_2 from "../../src/assets/recordbook/1-2.jpg";
+import image1_3 from "../../src/assets/recordbook/1-3.jpg";
+import image2 from "../../src/assets/recordbook/2.jpg";
+import image3 from "../../src/assets/recordbook/3.jpg";
+import image4 from "../../src/assets/recordbook/4.jpg";
+import image5_1 from "../../src/assets/recordbook/5-1.jpg";
+import image5_2 from "../../src/assets/recordbook/5-2.jpg";
+
 //slide 관련
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar, Navigation } from "swiper/modules";
@@ -45,13 +55,13 @@ export default function Recordbook() {
                                 autoHeight={true}
                             >
                                 <SwiperSlide>
-                                    <img src="../../src/assets/recordbook/1-1.jpg" alt="" />
+                                    <img src={image1_1} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/recordbook/1-2.jpg" alt="" />
+                                    <img src={image1_2} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/recordbook/1-3.jpg" alt="" />
+                                    <img src={image1_3} alt="" />
                                 </SwiperSlide>
                             </Swiper>
                         </div>
@@ -87,7 +97,7 @@ export default function Recordbook() {
                             날짜 기반 상태 초기화 및 자동 이관 로직 구현
                         </h4>
                         <div className="pt-[6px]">
-                            <img src="../../src/assets/recordbook/2.jpg" alt="" />
+                            <img src={image2} alt="" />
                         </div>
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
                             가계부라는 특성상 사용자의 수입/지출 데이터를 단발성으로 처리하는 것이
@@ -115,7 +125,7 @@ export default function Recordbook() {
                             제네릭을 활용한 타입 안정성 및 유연한 데이터 구조 설계
                         </h4>
                         <div className="pt-[6px]">
-                            <img src="../../src/assets/recordbook/3.jpg" alt="" />
+                            <img src={image3} alt="" />
                         </div>
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
                             TypeScript를 기반으로 상태 관리와 데이터 흐름을 설계하면서, 데이터
@@ -143,7 +153,7 @@ export default function Recordbook() {
                             상태 관리와 비즈니스 로직을 한 곳에서 깔끔하게 관리하기
                         </h4>
                         <div className="pt-[6px]">
-                            <img src="../../src/assets/recordbook/4.jpg" alt="" />
+                            <img src={image4} alt="" />
                         </div>
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
                             이번 프로젝트에서는 Zustand를 사용해 상태 관리와 비즈니스 로직을 한 곳에
@@ -179,10 +189,10 @@ export default function Recordbook() {
                                 autoHeight={true}
                             >
                                 <SwiperSlide>
-                                    <img src="../../src/assets/recordbook/5-1.jpg" alt="" />
+                                    <img src={image5_1} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/recordbook/5-2.jpg" alt="" />
+                                    <img src={image5_2} alt="" />
                                 </SwiperSlide>
                             </Swiper>
                         </div>

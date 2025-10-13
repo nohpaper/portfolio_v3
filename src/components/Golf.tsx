@@ -2,6 +2,12 @@ import { useParams } from "react-router-dom";
 import { usePortfolioStore } from "../store/store.ts";
 import { InfoNav } from "../assets/Fragment.tsx";
 
+//이미지 관련
+import image1_1 from "../../src/assets/golf/1-1.jpg";
+import image1_2 from "../../src/assets/golf/1-2.jpg";
+import image1_3 from "../../src/assets/golf/1-3.jpg";
+import image2 from "../../src/assets/golf/2.jpg";
+
 //slide 관련
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar, Navigation } from "swiper/modules";
@@ -19,7 +25,7 @@ export default function Golf() {
                     <h5 className="text-[16px] leading-[1.3]">
                         이 프로젝트는 하이브리드 앱 개발 프로젝트로, 모바일 전용 페이지를
                         퍼블리싱하는 업무를 맡았습니다. 퍼블리싱 초기 설계는 메인 작업자가
-                        담당하였으며,
+                        담당하였으며,&nbsp;
                         <b className="marker_yellow">
                             분배받은 작업 파트에 따라 일정에 맞춰 마크업 및 CSS 작업을 수행
                         </b>
@@ -40,18 +46,18 @@ export default function Golf() {
                                 autoHeight={true}
                             >
                                 <SwiperSlide>
-                                    <img src="../../src/assets/golf/1-1.jpg" alt="" />
+                                    <img src={image1_1} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/golf/1-2.jpg" alt="" />
+                                    <img src={image1_2} alt="" />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img src="../../src/assets/golf/1-3.jpg" alt="" />
+                                    <img src={image1_3} alt="" />
                                 </SwiperSlide>
                             </Swiper>
                         </div>
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
-                            메인 작업자가 설계한 퍼블리싱 구조에 맞춰 마크업을 구성하였으며,
+                            메인 작업자가 설계한 퍼블리싱 구조에 맞춰 마크업을 구성하였으며,&nbsp;
                             <b className="marker_yellow">
                                 동일한 컴포넌트는 템플릿화하여 재사용이 용이하도록 사전 준비를
                                 철저히 진행
@@ -65,11 +71,11 @@ export default function Golf() {
                             퍼블리셔 중심의 커뮤니케이션과 일정 조율
                         </h4>
                         <div className="pt-[6px]">
-                            <img src="../../src/assets/golf/2.jpg" alt="" />
+                            <img src={image2} alt="" />
                         </div>
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
                             이 프로젝트에서는 메인 퍼블리셔가 PL(Project Leader)의 역할까지 겸하면서
-                            디자인팀, 개발사와의 커뮤니케이션을 전담해주셨습니다.
+                            디자인팀, 개발사와의 커뮤니케이션을 전담해주셨습니다.&nbsp;
                             <b className="marker_yellow">
                                 일주일 단위로 작업 결과물을 개발사에 전달하는 구조로, 개발사가
                                 우선순위를 정하면 디자인팀과 일정을 조율해 퍼블리싱 작업을 진행
@@ -80,7 +86,7 @@ export default function Golf() {
                             많지 않았지만, 개발사와 협의하여 가능한 기능은 jQuery로 작업하여
                             전달하기도 했습니다. 기획자는 구조 설계에만 관여하였고, 실질적인 진행은
                             메인 퍼블리셔가 담당하여 프로젝트 흐름을 자연스럽게 이끌었습니다. 이를
-                            통해
+                            통해&nbsp;
                             <b className="marker_yellow">
                                 PL 역할의 중요성과 프로젝트 리딩 방식에 대해 실무적으로 배울 수 있는
                                 경험
@@ -93,7 +99,7 @@ export default function Golf() {
                         <p className="pt-[6px] text-[16px] leading-[1.3]">
                             이전 회사에서는 혼자서 전체 퍼블리싱을 담당하는 일이 많았기 때문에, 이번
                             프로젝트처럼 역할이 분담된 협업 환경에서의 퍼블리싱은 새로운 도전이자 큰
-                            배움의 기회였습니다.
+                            배움의 기회였습니다.&nbsp;
                             <b className="marker_yellow">
                                 퍼블리셔로서 일정에 맞춰 작업을 분배받고, 기능 구현 범위 내에서
                                 주도적으로 진행하며 협업의 중요성과 유연한 커뮤니케이션의 필요성을

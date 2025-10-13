@@ -2,6 +2,18 @@ import { InfoNav } from "../assets/Fragment.tsx";
 import { useParams } from "react-router-dom";
 import { usePortfolioStore } from "../store/store.ts";
 
+//이미지 관련
+import image1_1 from "../../src/assets/mabinogi/1-1.jpg";
+import image1_2_1 from "../../src/assets/mabinogi/1-2-1.jpg";
+import image1_2_2 from "../../src/assets/mabinogi/1-2-2.jpg";
+import image1_3_1 from "../../src/assets/mabinogi/1-3-1.jpg";
+import video1_3_1 from "../../src/assets/mabinogi/1-3-1.mp4";
+import image1_3_2 from "../../src/assets/mabinogi/1-3-2.jpg";
+import image1_3_3 from "../../src/assets/mabinogi/1-3-3.jpg";
+import image2_1_1 from "../../src/assets/mabinogi/2-1-1.jpg";
+import image2_1_2 from "../../src/assets/mabinogi/2-1-2.jpg";
+import image2_2 from "../../src/assets/mabinogi/2-2.jpg";
+
 //slide 관련
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper/modules";
@@ -198,7 +210,7 @@ export default function Mabinogi() {
                                         React 기반 구조 설계와 컴포넌트 단위 퍼블리싱
                                     </h4>
                                     <div className="pt-[6px]">
-                                        <img src="../../src/assets/mabinogi/1-1.jpg" alt="" />
+                                        <img src={image1_1} alt="" />
                                     </div>
                                     <p className="pt-[6px] text-[16px] leading-[1.3]">
                                         React를 공부하면서도 단순한 강의 따라하기가 아닌, 직접 써볼
@@ -235,16 +247,10 @@ export default function Mabinogi() {
                                             autoHeight={true}
                                         >
                                             <SwiperSlide>
-                                                <img
-                                                    src="../../src/assets/mabinogi/1-2-1.jpg"
-                                                    alt=""
-                                                />
+                                                <img src={image1_2_1} alt="" />
                                             </SwiperSlide>
                                             <SwiperSlide>
-                                                <img
-                                                    src="../../src/assets/mabinogi/1-2-2.jpg"
-                                                    alt=""
-                                                />
+                                                <img src={image1_2_2} alt="" />
                                             </SwiperSlide>
                                         </Swiper>
                                     </div>
@@ -301,22 +307,22 @@ export default function Mabinogi() {
                                             autoHeight={true}
                                         >
                                             <SwiperSlide>
-                                                <img
-                                                    src="../../src/assets/mabinogi/1-3-1.jpg"
-                                                    alt=""
-                                                />
+                                                <video
+                                                    controls
+                                                    muted
+                                                    autoPlay
+                                                    preload="none"
+                                                    loop
+                                                    poster={image1_3_1}
+                                                >
+                                                    <source src={video1_3_1} type="video/mp4" />
+                                                </video>
                                             </SwiperSlide>
                                             <SwiperSlide>
-                                                <img
-                                                    src="../../src/assets/mabinogi/1-3-2.jpg"
-                                                    alt=""
-                                                />
+                                                <img src={image1_3_2} alt="" />
                                             </SwiperSlide>
                                             <SwiperSlide>
-                                                <img
-                                                    src="../../src/assets/mabinogi/1-3-3.jpg"
-                                                    alt=""
-                                                />
+                                                <img src={image1_3_3} alt="" />
                                             </SwiperSlide>
                                         </Swiper>
                                     </div>
@@ -426,14 +432,14 @@ export default function Mabinogi() {
                                         >
                                             <SwiperSlide>
                                                 <img
-                                                    src="../../src/assets/mabinogi/2-1-1.jpg"
+                                                    src={image2_1_1}
                                                     alt=""
                                                     className="w-[70%] block mx-auto"
                                                 />
                                             </SwiperSlide>
                                             <SwiperSlide>
                                                 <img
-                                                    src="../../src/assets/mabinogi/2-1-2.jpg"
+                                                    src={image2_1_2}
                                                     alt=""
                                                     className="w-[70%] block mx-auto"
                                                 />
@@ -474,7 +480,7 @@ export default function Mabinogi() {
                                     </h4>
                                     <div className="pt-[6px]">
                                         <img
-                                            src="../../src/assets/mabinogi/2-1-1.jpg"
+                                            src={image2_2}
                                             alt=""
                                             className="w-[70%] block mx-auto"
                                         />
