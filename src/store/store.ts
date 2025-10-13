@@ -21,14 +21,14 @@ interface PortfolioStore {
 export const usePortfolioStore = create<PortfolioStore>(() => ({
     list: [
         {
-            name: "",
+            name: "pokemon",
             isMulti: false,
             multiTitle: [],
             workType: "프론트",
             info: [
                 {
-                    title: "포켓몬스터 도감",
-                    link: "",
+                    title: "포켓몬스터 1세대 도감",
+                    link: "https://nohpaper.github.io/pokemonAPI/",
                     date: "2025. 09. 15 ~ 09. 22(8일)",
                     type: "반응형",
                     contribution: 100,

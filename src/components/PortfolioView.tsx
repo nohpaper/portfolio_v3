@@ -7,6 +7,7 @@ import EnergySolution from "./EnergySolution.tsx";
 import Shopchain from "./Shopchain.tsx";
 import Mabinogi from "./Mabinogi.tsx";
 import Recordbook from "./Recordbook.tsx";
+import Pokemon from "./Pokemon.tsx";
 
 export default function PortfolioView() {
     const { name } = useParams<{ name: string }>();
@@ -22,8 +23,10 @@ export default function PortfolioView() {
         return <Shopchain />;
     } else if (name === "mabinogi") {
         return <Mabinogi />;
-    }else if (name === "recordbook") {
+    } else if (name === "recordbook") {
         return <Recordbook />;
+    } else if (name === "pokemon") {
+        return <Pokemon />;
     }
 
     return (

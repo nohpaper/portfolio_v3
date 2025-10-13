@@ -31,6 +31,7 @@ export function InfoNav({ list, name, index, isInitFixed }: InfoNavProps) {
                         <div>
                             <a
                                 href={findThisPortfolio?.info[index].link}
+                                target="_blank"
                                 className="w-[17px] h-[17px] block bg-[url(../public/common/icon_link.svg)]"
                             ></a>
                         </div>
