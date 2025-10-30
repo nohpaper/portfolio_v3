@@ -64,7 +64,7 @@ export default function Main() {
         <div className="w-[1120px] mx-auto py-[80px]">
             <div className="flex gap-[24px]">
                 <div className="px-[30px] py-[20px] rounded-20px bg-white">
-                    구조화된 퍼블리싱, 책임감 있는 구현을 하는 5년차 퍼블리셔 노종희입니다
+                    코드를 통해 구조와 경험을 설계하는 노종희입니다.
                 </div>
                 <ul className="flex gap-[10px] ">
                     <li className="w-[56px] h-[56px] relative group overflow-hidden transition-all duration-700 rounded-full hover:w-[250px]">
@@ -89,18 +89,24 @@ export default function Main() {
                 <div className="px-[30px] py-[20px] rounded-20px bg-white">
                     <p className="text-[16px] leading-[1.3]">
                         <b className="marker_yellow">
-                            불필요한 반복을 줄이고, 처음부터 완성도 있는 구조를 설계하는 퍼블리셔
+                            작업의 흐름을 예측하고, 이후 수정이나 유지보수까지 고려한 퍼블리싱을
+                            지향
                         </b>
-                        입니다. 작업의 흐름을 예측하고, 이후 수정이나 유지보수까지 고려한 퍼블리싱을
-                        지향합니다. 효율적인 구현 방식을 고민하는 습관은 결과적으로 더 나은 사용자
-                        경험과 협업으로 이어졌습니다.
+                        합니다. 효율적인 구현 방식을 고민하는 습관은 결과적으로 더 나은 사용자
+                        경험과 협업으로 이어졌습니다. 5년간 다양한 프로젝트에서 퍼블리싱 전 과정을
+                        책임지고 운영해보며 디자인과 개발 사이의 흐름을 조율해왔습니다.
                         <br />
                         <br />
-                        5년간 다양한 프로젝트에서 퍼블리싱 전 과정을 책임지고 운영하며, 디자인과
-                        개발 사이의 흐름을 조율해왔습니다. 인터랙션 구현, 컴포넌트 구조화, 일정
-                        관리, 협업 커뮤니케이션까지 퍼블리싱의 시작부터 최종 전달까지 직접 수행한
-                        경험을 바탕으로 코드와 사용자, 그리고 팀 모두를 고려한 퍼블리싱을 만들어가고
-                        있습니다.
+                        인터랙션 구현, 컴포넌트 구조화, 일정 관리, 협업 커뮤니케이션까지 퍼블리싱의
+                        시작부터 최종 전달까지 직접 수행한 경험을 바탕으로 코드와 사용자, 팀 모두를
+                        고려한 퍼블리싱을 만들어가고 있습니다.
+                        <br />
+                        <br />
+                        또한 HTML, CSS, JavsScript, Jquery 등 웹 퍼블리싱 기본 기술뿐만 아니라,
+                        React, TypeScript, Redux, Zustand 등 프론트엔드 전반의 기술을 꾸준히
+                        학습하며 개발자로서의 시야를 확장하고 있습니다. 이를 통해 단순한 화면 구현을
+                        넘어, 유지보수성과 확장성을 고려한 코드 설계와 효율적인 개발 프로세스를
+                        적용할 수 있습니다.
                     </p>
                 </div>
                 <div>

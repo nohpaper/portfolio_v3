@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import type { PortfolioList } from "../store/store.ts";
+import { useEffect } from "react";
 
 interface InfoNavProps {
     list: PortfolioList[];
@@ -10,6 +11,10 @@ interface InfoNavProps {
 export function InfoNav({ list, name, index, isInitFixed }: InfoNavProps) {
     const navigate = useNavigate();
     const findThisPortfolio = list.find((element) => element.name === name);
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <div
